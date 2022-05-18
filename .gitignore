@@ -1,7 +1,11 @@
 # Local .terraform directories
 **/.terraform/*
 .terraform
+
+# My stuff
 archive
+aws_authorized_keys*
+*.log
 
 # .tfstate files
 *.tfstate
