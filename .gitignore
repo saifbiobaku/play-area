@@ -6,6 +6,7 @@
 archive
 aws_authorized_keys*
 *.log
+.DS_Store
 
 # .tfstate files
 *.tfstate

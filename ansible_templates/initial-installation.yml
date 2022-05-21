@@ -8,16 +8,15 @@
       command: amazon-linux-extras install epel -y
     - name: "configure repo"
       command: yum-config-manager --enable epel
-    - name: "install ansible"
+    - name: "yum installation"
       yum:
-        name: ansible 
+        name: "{{item}}"
         state: present
-    - name: "install wget"
-      yum:
-        name: wget
-        state: present
-    - name: "start and enable wget"
-      service:
-        name: wget
-        state: started
-        enabled: yes
+      loop:
+        - ansible
+        - vim
+    - name: "pip installation"
+      pip:
+        name: 
+        - pipenv
+        - click
